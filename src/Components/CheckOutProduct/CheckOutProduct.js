@@ -9,7 +9,7 @@ const CheckOutProduct = () => {
     const [productData, setProductData] = useState({})
 
     useEffect(() => {
-        fetch('http://localhost:4000/find/' + id)
+        fetch('https://stark-lowlands-37567.herokuapp.com/find/' + id)
             .then((response) => response.json())
             .then(data => {
                 // console.log(data);
@@ -22,7 +22,7 @@ const CheckOutProduct = () => {
         const date = new Date();
         const just_date = date.toDateString('dd/MM/yyyy')
         const UserOrder = { ...loggedInUser, ...productData ,  date: just_date }
-        fetch('http://localhost:4000/order', {
+        fetch('https://stark-lowlands-37567.herokuapp.com/order', {
             method: 'POST',
             headers: { "content-Type": 'application/json' },
             body: JSON.stringify(UserOrder)

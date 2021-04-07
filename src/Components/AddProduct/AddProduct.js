@@ -16,7 +16,7 @@ const AddProduct = () => {
             image: imageURL
         }
 
-        fetch('http://localhost:4000/addProduct', {
+        fetch('https://stark-lowlands-37567.herokuapp.com/addProduct', {
             method: 'POST',
             headers: { "content-Type": 'application/json' },
             body: JSON.stringify(productInfo)

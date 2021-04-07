@@ -6,7 +6,7 @@ const Orders = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:4000/orders")
+        fetch("https://stark-lowlands-37567.herokuapp.com/orders")
             .then((res) => res.json())
             .then((data) => {
                 const specificUserData = data.filter(
@@ -17,7 +17,7 @@ const Orders = () => {
     }, [orders]);
 
     const deleteOrder = (id) => {
-        fetch('http://localhost:4000/deleteOrder/' + id, {
+        fetch('https://stark-lowlands-37567.herokuapp.com/deleteOrder/' + id, {
             method: 'DELETE'
         })
         .then(res => console.log('deleted ' + id))
