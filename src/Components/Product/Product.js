@@ -13,7 +13,7 @@ const Product = (props) => {
             <img className="img-fluid" src={image} alt=""/>
             <h4>{name}</h4>
             <div style={{display: 'flex', justifyContent: 'space-between'}}>
-            <h5>${price}</h5>
+            <h5>৳{price}</h5>
             <Link to={`/checkout/${_id}`}> <button className="btn btn-primary">Buy Now</button> </Link>
             </div>
         </div>

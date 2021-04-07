@@ -7,10 +7,10 @@ const ManageProducts = () => {
         fetch('https://stark-lowlands-37567.herokuapp.com/allproducts')
             .then(res => res.json())
             .then(data => setProducts(data))
-    }, [])
+    }, [products])
 
     const deleteProduct = (id) => {
-        fetch('https://stark-lowlands-37567.herokuapp.com/delete' + id, {
+        fetch('https://stark-lowlands-37567.herokuapp.com/delete/' + id, {
             method: 'DELETE'
         })
         .then(res => console.log('delete ' + id))

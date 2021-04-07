@@ -14,7 +14,7 @@ const Orders = () => {
                 );
                 setOrders(specificUserData);
             });
-    }, [loggedInUser.email]);
+    }, [orders,loggedInUser.email]);
 
     const deleteOrder = (id) => {
         fetch('https://stark-lowlands-37567.herokuapp.com/deleteOrder/' + id, {
@@ -34,7 +34,7 @@ const Orders = () => {
                     <th>Price</th>
                     <th>weight</th>
                     <th>Date of Order</th>
-                    <th>Delete</th>
+                    <th></th>
                 </tr>
 
                 {orders.map((order) => 
