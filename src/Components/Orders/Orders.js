@@ -14,7 +14,7 @@ const Orders = () => {
                 );
                 setOrders(specificUserData);
             });
-    }, [orders]);
+    }, [loggedInUser.email]);
 
     const deleteOrder = (id) => {
         fetch('https://stark-lowlands-37567.herokuapp.com/deleteOrder/' + id, {

@@ -29,7 +29,6 @@ const AddProduct = () => {
         reset();
     };
 
-
     const handleImageUpload = (event) => {
         const imageData = new FormData();
         imageData.set('key', '4c0e7ebed82e54bf1ad6b9fa0109d8d8');
@@ -71,12 +70,6 @@ const AddProduct = () => {
             </div>
 
             }
-
-            
-
-           
-           
-
         </div>
     );
 };

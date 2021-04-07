@@ -7,7 +7,7 @@ const Home = () => {
         fetch('https://stark-lowlands-37567.herokuapp.com/allproducts')
         .then(res => res.json())
         .then(data => setProducts(data))
-    },[products])
+    },[])
     return (
         <div className="container"  style={{width:"100%"}}>
            {

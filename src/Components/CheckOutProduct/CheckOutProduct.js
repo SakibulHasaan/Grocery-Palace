@@ -20,13 +20,17 @@ const CheckOutProduct = () => {
 
     const handleOrder = () => {
         const date = new Date();
+        const pData= {...productData, id: productData._id}
+        delete pData._id;
         const just_date = date.toDateString('dd/MM/yyyy')
-        const UserOrder = { ...loggedInUser, ...productData ,  date: just_date }
+        const UserOrder = { ...loggedInUser, ...pData ,  date: just_date }
         fetch('https://stark-lowlands-37567.herokuapp.com/order', {
             method: 'POST',
             headers: { "content-Type": 'application/json' },
             body: JSON.stringify(UserOrder)
         })
+        .then(res => alert("Order Successful"))
+        
     }
 
     return (
