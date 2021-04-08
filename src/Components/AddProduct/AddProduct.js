@@ -27,6 +27,7 @@ const AddProduct = () => {
             })
 
         reset();
+        setIsDisabled(true);
     };
 
     const handleImageUpload = (event) => {
